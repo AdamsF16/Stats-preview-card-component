@@ -22,6 +22,13 @@ body {
     background-color: $body-background;
 }
 
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .wrapper {
     max-width: 1500px;
     margin: 0 auto;
@@ -52,7 +59,7 @@ body {
             width: 100%;
             height: 100%;
             background-color: $soft-violet;
-            opacity: .5;
+            opacity: .7;
         }
     }
 
@@ -107,6 +114,8 @@ body {
     &__stats-item-text {
         color: $stat-headings;
         text-align: center;
+        text-transform: uppercase;
+        font-family: $secondary-font;
     }
 
 }
@@ -118,4 +127,59 @@ body {
 	a {
 		color: hsl(228, 45%, 44%);
 	}
+}
+
+
+@media(min-width: 800px){
+    .card {
+        &__box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            min-height: 400px;
+            max-width: 1200px;
+        }
+
+        &__img-box {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            background-image: url("../images/image-header-desktop.jpg");
+            height: 100%;
+            width: 100%;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border-top-left-radius: 0px;
+        }
+
+        &__text-box {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            margin-left: 6em;
+            margin-right: 6em;
+        }
+
+        &__title {
+            text-align: left;
+        }
+
+        &__text{
+            text-align: left;
+            line-height: 2em;
+        }
+
+        &__stats-box {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 5em;
+        }
+
+        &__stats-item-heading {
+            font-size: 2.4em;
+        }
+
+        &__stats-item-text {
+            font-size: 1.3em;
+        }
+    }
 }
