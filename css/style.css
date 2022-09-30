@@ -133,6 +133,7 @@ main {
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: hsla(0deg, 0%, 100%, 0.75);
 }
 .attribution a {
   color: hsl(228deg, 45%, 44%);
