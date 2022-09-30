@@ -1,0 +1,121 @@
+$body-background: hsl(233, 47%, 7%);
+$card-background: hsl(244, 38%, 16%);
+$soft-violet: hsl(277, 64%, 61%);
+$main-heading-stats: hsl(0, 0%, 100%);
+$main-paragraph: hsla(0, 0%, 100%, 0.75);
+$stat-headings: hsla(0, 0%, 100%, 0.6);
+$main-font: 'Inter', sans-serif;
+$secondary-font: 'Lexend Deca', sans-serif;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    background-color: $body-background;
+}
+
+.wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.card {
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $card-background;
+        width: 90%;
+        margin: 2em auto;
+        border-radius: 15px;
+    }
+
+    &__img-box {
+        background-image: url("../images/image-header-mobile.jpg");
+        background-size: cover;
+        width: 100%;
+        height: 250px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        overflow: hidden;
+        
+        &--shadow {
+            width: 100%;
+            height: 100%;
+            background-color: $soft-violet;
+            opacity: .5;
+        }
+    }
+
+    &__text-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: $main-font;
+        margin: 1.5rem 2rem;
+        
+    }
+
+    &__title {
+        color: $main-heading-stats;
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: .8em;
+
+        &--violet {
+            color: $soft-violet;
+        }
+    }
+
+    &__text {
+        color: $main-paragraph;
+        text-align: center;
+        margin-bottom: 1em;
+        font-size: 1.5em;
+       
+    }
+
+    &__stats-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__stats-item {
+        margin: 1.2em 0;
+    }
+
+    &__stats-item-heading {
+        color: $main-heading-stats;
+        font-weight: 700;
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: .3em;
+    }
+
+    &__stats-item-text {
+        color: $stat-headings;
+        text-align: center;
+    }
+
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+
+	a {
+		color: hsl(228, 45%, 44%);
+	}
+}
